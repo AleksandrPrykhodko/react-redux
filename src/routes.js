@@ -1,5 +1,5 @@
 import React from 'react';
-import {IndexRoute, Route} from 'react-router';
+import {IndexRoute, Route, Redirect} from 'react-router';
 import { isLoaded as isAuthLoaded, load as loadAuth } from 'redux/modules/auth';
 import {
     App,
@@ -10,6 +10,9 @@ import {
     Login,
     LoginSuccess,
     Survey,
+    User,
+    UserForm,
+    UserListContainer,
     NotFound,
   } from 'containers';
 
@@ -50,6 +53,12 @@ export default (store) => {
       <Route path="login" component={Login}/>
       <Route path="survey" component={Survey}/>
       <Route path="widgets" component={Widgets}/>
+      <Redirect from="users" to="users/list" />
+      <Route path="users" component={User}>
+        <Route path="list" component={UserListContainer} />
+        <Route path="add" component={UserForm} />
+        <Route path=":id/edit" component={UserForm} />
+      </Route>
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />

@@ -6,4 +6,7 @@ export About from './About/About';
 export Login from './Login/Login';
 export LoginSuccess from './LoginSuccess/LoginSuccess';
 export Survey from './Survey/Survey';
+export User from './User/User';
+export UserListContainer from './User/UserListContainer';
+export UserForm from './User/UserForm';
 export NotFound from './NotFound/NotFound';

@@ -11,3 +11,6 @@ export InfoBar from './InfoBar/InfoBar';
 export MiniInfoBar from './MiniInfoBar/MiniInfoBar';
 export SurveyForm from './SurveyForm/SurveyForm';
 export WidgetForm from './WidgetForm/WidgetForm';
+export UserList from './User/UserList';
+export UserListItem from './User/UserListItem';
+export UserForm from './User/UserForm';
